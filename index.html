@@ -42,25 +42,44 @@
         </div>
     </header>
     <main class="container-fluid">
-     <div class="row mt-4">
-        <div class="col-12 col-md-6 col-lg-3">
-         <div class="card">
-          <div class="card-header bg-dark bg-gradient text-white text-center">
-            <span>Rick sanchez</span>  
-          </div>
-          <div class="card-body">
-             <img src="img/rick_sanchez.jpeg" class="img-fluid">
-          </div>
-          <div class="card-footer d-grid gap-1"><!--para que el boton quede con todo el margen-->
-              <button class="btn btn-info"> ver personaje</button>
-          </div>
-         </div>
-        </div>
+     <div id="contenedor-personajes" class="row mt-4">
+        
      </div>
       
     </main>
+    <div id="moldes" class="d-none">
+    <div class="col-12 col-md-6 col-lg-3 molde-personaje">
+      <div class="card">
+       <div class="card-header bg-dark bg-gradient text-white text-center">
+         <span class="nombre-personaje">Nombre del personaje</span>  
+       </div>
+       <div class="card-body text-center">
+          <img src="img/rick_sanchez.jpeg" 
+          class="img-fluid imagen-personaje">
+       </div>
+       <div class="card-footer d-grid gap-1"><!--para que el boton quede con todo el margen-->
+           <button class="btn btn-info btn-ver-personaje"> ver Personaje</button>
+       </div>
+      </div>
+     </div>
+     <div class="molde-detalle">
+     <div class="col">
+      <h3 class="nombre-sa-personaje">Nombre Personaje</h3>
+     </div>
+     <div class="row">
+      <div class="col">
+       <img class="imagen-sa-personaje"src="" alt="">
+      </div>
+     </div>
+     <div class="row">
+       <div class="col">
+         <i class="estado-sa-personaje">Estado</i>
+       </div>
+     </div>
 
-
+    </div>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/index.js"></script>
