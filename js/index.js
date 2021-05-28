@@ -4,8 +4,23 @@ const mostrarPersonaje = function(){
    (".molde-detalle").cloneNode(true);
    molde.querySelector(".nombre-sa-personaje").innerText = personaje.name;
    molde.querySelector(".imagen-sa-personaje").src = personaje.image;
-   molde.querySelector(".estado-sa-personaje").innerText = personaje.status;
-   Swal.fire({ // swit alert
+   if(personaje.status == "Alive"){
+      molde.querySelector(".estado-sa-personaje").classList.add("far"
+      ,"fa-smile","text-info","fa-3x","mt-4");
+      
+   }else if(personaje.status == "unknown"){
+      molde.querySelector(".estado-sa-personaje").classList.add("fas"
+      ,"fa-question","text-danger","fa-3x","mt-4");
+   
+      
+   }else {
+      molde.querySelector(".estado-sa-personaje").classList.add("fas"
+      ,"fa-skull-crossbones","text-dark","fa-3x","mt-4");
+   
+   }   
+   
+   
+    Swal.fire ({ // swit alert
     title: personaje.name,
 
     html: molde.innerHTML
